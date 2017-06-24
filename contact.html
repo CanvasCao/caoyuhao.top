@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>联系我</title>
+    <link rel="stylesheet" href="css/common/common.css"/>
+    <link rel="stylesheet" href="css/common/header.css"/>
+    <style>
+        #canvas {
+            background-image: url("img/contact/contact.png");
+            background-size: cover;
+            cursor: crosshair;
+            top: 30%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class='header'></div>
+<canvas id='canvas' width="600" height="300">
+    此浏览器无法显示canvas标签，请更换浏览器
+</canvas>
+</body>
+<script src="js/tool/jquery-1.11.3.min.js"></script>
+<script src="js/tool/velocity.min.js"></script>
+<script src="js/tool/velocity.ui.js"></script>
+<script src='js/common/header.js'></script>
+<script>
+    $(function () {
+        $('#canvas').hide().fadeIn(2000)
+
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var w = canvas.width;
+        var h = canvas.height;
+        ctx.fillStyle = "lightgray";
+        ctx.fillRect(0, 0, w, h);
+
+        canvas.onmousedown = function (e) {
+            canvas.onmousemove = function (e) {
+                var e = e || event;
+                ctx.globalCompositeOperation = "destination-out";
+                ctx.beginPath();
+                ctx.arc(e.offsetX, e.offsetY, 50, 0, Math.PI * 2, true);
+                ctx.fillStyle = "yellowgreen";
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+
+        window.onmouseup = function () {
+//        canvas.onmousedown=null;
+            canvas.onmousemove = null;
+        }
+
+    })
+</script>
+</html>

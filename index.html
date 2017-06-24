@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>曹昱豪</title>
+    <link rel="stylesheet" href="css/common/common.css"/>
+    <link rel="stylesheet" href="css/index/index.css"/>
+    <link rel="stylesheet" href="css/common/header.css"/>
+</head>
+<body>
+<div class='stage'>
+    <!-- 舞台只是为了背景颜色-->
+    <!-- 浮动的小图 加container为了景深-->
+    <div class='context-container'>
+        <div class="s1p1 mainTxt">Welcome to caoyuhao.top</div>
+        <div class="s1p2 " style='font-size: 22px;line-height: 22px'></div>
+
+        <div class="s2p1 mainTxt">HTML5+CSS3</div>
+        <div class="s2p2 subTxt">熟练使用HTML5新标签<br>精通CSS3特效</div>
+        <img class='s2pic' src="img/index/h5c3.png" width="150"/>
+
+        <div class="s3p1 mainTxt">Javascript</div>
+        <div class="s3p2 subTxt">精通浏览器端Javascript <br>熟悉ES6</div>
+        <img class='s3pic' src="img/index/jsjq.png" width="180"/>
+
+        <div class="s4p1 mainTxt">Canvas</div>
+        <div class="s4p2 subTxt">精通Canvas2D游戏和绘图程序 <br>熟悉three.js</div>
+        <img class='s4pic1' src="img/index/tetris.png" width="200"/>
+        <img class='s4pic2' src="img/index/tetris2.png" width="200"/>
+
+        <div class="s5p1 mainTxt">.NET开发</div>
+        <div class="s5p2 subTxt">曾经的.NET开发工程师,熟悉C#</div>
+        <div class="s5pic1"></div>
+        <img class='s5pic2' src="img/index/vs.png" width="150"/>
+
+        <div class="s6p1 mainTxt">VUE2.0</div>
+        <div class="s6p2 subTxt">熟悉基于VUE2.0的组件化开发<br><a class='subTxt' href="https://github.com/CanvasCao/C-UI"
+                                                        target="_blank">GitHub---C-UI</a>
+        </div>
+        <img class='s6Up' src="img/index/puzzleUp.png" width="300"/>
+        <img class='s6Middle' src="img/index/puzzleMiddle.png" width="300"/>
+        <img class='s6Left' src="img/index/puzzleLeft.png" width="300"/>
+
+        <div class="s7p1 mainTxt">Python</div>
+        <div class="s7p2 subTxt">熟悉Python爬虫 <br>数据挖掘、分析、可视化<br></div>
+        <img class='s7pic1' src="img/index/python.png" width="300"/>
+
+    </div>
+
+    <!-- 底部导航-->
+    <div class='nav'>
+        <ul>
+            <li class="current" index='0'>Index</li>
+            <li index='1'>H5C3</li>
+            <li index='2'>Javascript</li>
+            <li index='3'>Canvas</li>
+            <li index='4'>.NET</li>
+            <li index='5'>VUE2.0</li>
+            <li index='6'>Python</li>
+        </ul>
+    </div>
+
+    <!-- 底部-->
+    <div class='bottom'></div>
+    <!--箭头-->
+    <img src="img/index/left.png" class='left'/>
+    <img src="img/index/right.png" class='right'/>
+    <!-- 顶部-->
+    <div class='header'></div>
+
+</div>
+</body>
+<script src="js/tool/jquery-1.11.3.min.js"></script>
+<script src="js/tool/velocity.min.js"></script>
+<script src="js/tool/velocity.ui.js"></script>
+<script src='js/tool/typed.js'></script>
+<script src='js/common/header.js'></script>
+<script src='js/index/index.js'></script>
+<script>
+    $(function () {
+        $(".s1p2").typed({
+            strings: ["^1000---Java^500script工程师 曹^500昱豪 个人网站"],
+            typeSpeed: 60,
+            contentType: 'html',
+            loop: false,
+            showCursor: false,
+//            cursorChar: "www",
+        });
+    })
+</script>
+</html>

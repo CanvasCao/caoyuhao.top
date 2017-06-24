@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+.stage {
+    /*舞台只为了背景颜色*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #7a66db;
+    transition: all 1s ease 0s;
+}
+
+/*箭头*/
+.left, .right {
+    position: absolute;
+    height: 34px;
+    width: 14px;
+    cursor: pointer;
+    opacity: 0.6;
+    top: 50%;
+    padding: 20px;
+
+}
+
+.left {
+    left: 30px;
+    /*-webkit-animation:leftmove 1s normal  infinite;*/
+    /*-o-animation:leftmove 1s normal  infinite;*/
+    animation: leftmove 1s ease-in-out 0s infinite alternate;
+}
+
+@keyframes leftmove {
+    from {
+        left: 20px;
+    }
+    to {
+        left: 40px;
+    }
+}
+
+.right {
+    right: 30px;
+    animation: rightmove 1s ease-in-out 0s infinite alternate;
+}
+
+@keyframes rightmove {
+    from {
+        right: 20px;
+    }
+    to {
+        right: 40px;
+    }
+}
+
+/*底部导航*/
+.nav {
+    font: 30px '黑体';
+    font-weight: bold;
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    /*没有宽是不会居中的*/
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav ul {
+}
+
+.nav li {
+    font-size: 28px;
+    perspective: 1000px;
+    display: inline-block;
+    margin-left: 20px;
+    transform: translateZ(-00px) rotateX(60deg);
+    text-shadow: 0 10px 0px rgba(0, 0, 0, .3), 0 0 25px rgba(0, 0, 0, .5);
+    transition: all 0.8s ease 0s;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.nav li.current {
+    transform: translateZ(0px) rotateX(0deg);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .3), 0 0 0px rgba(0, 0, 0, .5);
+    opacity: 1;
+
+}
+
+/*内容*/
+.context-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    text-align: left;
+
+}
+
+.context-container a {
+    text-decoration: underline;
+}
+
+.mainTxt {
+    font-size: 60px;
+    font-weight:bold;
+}
+
+.subTxt {
+    font-size: 35px;
+}
+
+.s1p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    width: 800px;
+    text-align: center;
+}
+
+.s1p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+/*第二幅h5c3*/
+.s2p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s2p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+
+}
+
+.s2pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+/*第三幅 js*/
+.s3p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s3p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    font: 30px '黑体';
+}
+
+
+
+.s3pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+/*第四幅canvas*/
+.s4p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s4p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+
+}
+
+.s4pic1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s4pic2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+/*第五幅。net*/
+.s5p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s5p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+
+}
+.s5pic1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    width: 220px;
+    height: 220px;
+    background-color: white;
+
+}
+.s5pic2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+/*第六幅 组件化*/
+.s6p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s6p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+
+}
+
+.s6Up{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+.s6Left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+.s6Middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+/*第七幅 Python*/
+.s7p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s7p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.s7pic1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}

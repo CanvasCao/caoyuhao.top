@@ -1,0 +1,64 @@
+
+
+/*名字*/
+.name {
+    position: absolute;
+    top: -100px;
+    opacity: 0.3;
+    padding: 20px;
+    cursor: default;
+    font: 50px '黑体';
+    font-weight: bold;
+}
+
+.cao {
+    left: 0px;
+}
+
+.yu {
+    left: 60px;
+}
+
+.hao {
+    left: 120px;
+}
+
+/*头部*/
+.header {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: -80px;
+
+}
+
+.header-ul {
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.header-ul li {
+    float: left;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: all 0.8s ease 0s;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.header-ul li:hover {
+    opacity: 1;
+}
+
+/*扩大a标签的点击范围*/
+.header a{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
